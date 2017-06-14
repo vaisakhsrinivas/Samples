@@ -1,5 +1,5 @@
-def checkrange(number):
-    if number in range(0,100):
+def checkrange(number, low, high):
+    if number in range(low,high):
         print("number in range")
     else:
         print("number out of range")
