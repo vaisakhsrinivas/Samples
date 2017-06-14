@@ -5,4 +5,6 @@ def checkrange(number, low, high):
         print("number out of range")
 
 number = int(input("Enter the number"))
-checkrange(number)
+low = int(input("Enter the number"))
+high = int(input("Enter the number"))
+checkrange(number, low, high)
