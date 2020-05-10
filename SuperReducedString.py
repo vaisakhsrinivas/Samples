@@ -1,8 +1,6 @@
-import sys
-
 def super_reduced_string(s):
 
-    count =0;
+    count = 0
     for i in range(0, len(s)-1, 1):
         j = i+1
         if s[i]==s[j]:
