@@ -10,5 +10,5 @@ def reversal (a):
         la = la-1
     return a
 
-a = [1,2,4,0]
+a = [1,2,4,0,7]
 print(reversal(a))
