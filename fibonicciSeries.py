@@ -6,9 +6,11 @@ def fib(N):
         return res[1]
     for i in range(2,N+1):
         res.append(res[-1] + res[-2])
-    return res[-1]
+    return res
 
 
 
-result  = fib(4)
+
+
+result  = fib(6)
 print(result)
