@@ -19,5 +19,5 @@ def urlifyString(s):
 
 
 
-print(urlifyString("Cracking the coding interview    "))
+print(urlifyString("    Cracking the coding interview    "))
 
