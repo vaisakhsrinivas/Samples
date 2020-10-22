@@ -2,9 +2,9 @@ def panlindrome(s):
     reverse = s[::-1]
 
     if reverse == string:
-        print("Palindrome")
+        return True
     else:
-        print("Not Palindrome")
+        return False
 
 string = str(input("Enter the string"))
 panlindrome(string)
