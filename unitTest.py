@@ -13,5 +13,13 @@ class unitTest(unittest.TestCase):
         self.assertEqual(result, True)
 
 
+    def testFailCase_palindrome(self):
+
+        #test = "malayalam"
+        result = Palindrome.panlindrome("test")
+
+        self.assertEqual(result, False)
+
+
 if __name__ == '__main__':
     unittest.main()
