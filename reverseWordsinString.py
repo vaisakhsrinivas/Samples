@@ -32,6 +32,12 @@ while True:
 
         break
 
+print(s)
+
+#s = "".join(s)
+
+#print(s)
+
 s.reverse()
 
 s = "".join(s)
