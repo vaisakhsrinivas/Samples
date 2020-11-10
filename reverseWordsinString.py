@@ -34,11 +34,11 @@ while True:
 
 print(s)
 
-#s = "".join(s)
+s = "".join(s)
 
-#print(s)
+print(s)
 
-s.reverse()
+#s.reverse()
 
 s = "".join(s)
 
