@@ -1,8 +1,3 @@
-
-
-
-
-
 def youmethod(input_list):
 
 
