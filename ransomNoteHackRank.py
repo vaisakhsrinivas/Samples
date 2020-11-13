@@ -1,12 +1,3 @@
-#!/bin/python3
-
-import math
-import os
-import random
-import re
-import sys
-
-# Complete the checkMagazine function below.
 def checkMagazine(magazine, note):
 
     magdict = dict()
@@ -24,11 +15,17 @@ def checkMagazine(magazine, note):
         else:
             notedict[n] += 1
 
-    if all(item in magdict.items() for item in notedict.items()):
+    found = True
+    for k,v in notedict.items():
+        if k in magdict and magdict[k] >= v:
+            continue
+        else:
+            found = False
+            break
+    if found:
         print('Yes')
     else:
         print('No')
-
 
 
 
