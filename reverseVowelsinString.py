@@ -1,5 +1,5 @@
 def reverseVowels(s):
-    vowels = ["a", "e", "i", "o", "u"]
+    vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
     l = len(s)
     start = 0
     end = l-1
