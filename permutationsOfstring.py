@@ -1,12 +1,9 @@
-def toString(List):
-    return "".join(List)
-
 
 def permutations (a, l, r):
 
     if (l==r):
 
-        print(toString(a))
+        print("".join(a))
 
     else:
 
