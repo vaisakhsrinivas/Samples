@@ -1,9 +1,12 @@
 
 def permutations (a, l, r):
 
+    #d = dict()
     if (l==r):
 
-        print("".join(a))
+        print("mycommand", " ".join(a))
+       # d["mycommand", " ".join(a)] = 1
+        #print(d.keys())
 
     else:
 
@@ -14,9 +17,10 @@ def permutations (a, l, r):
             a[l], a[i] = a[i], a[l]
 
 
-s = "ABC"
+#s = "ABC"
 
+s = ["-a", "-b", "-c", "-d"]
 l = len(s)
-a = list(s)
+#a = list(s)
 
-permutations(a, 0, l-1)
+permutations(s, 0, l-1)
