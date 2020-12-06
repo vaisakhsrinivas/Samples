@@ -6,6 +6,6 @@ def transitionPoint(arr, n):
     return -1
 
 
-a = [0,0,0,0,1]
+a = [0,0,0,1]
 l = len(a)
 print(transitionPoint(a, l))
