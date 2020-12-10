@@ -4,7 +4,7 @@ def Prime(number):
         
        @return: bool: True if number is prime else false
     """
-
+    count = 0
     if type(number) != int:
         return False
     elif number == 0:
@@ -14,6 +14,11 @@ def Prime(number):
     elif number > 1:
         for i in range (2, number):
             if (number % i == 0):
-                return False
-            else:
-                return True
+                print("Not Prime")
+                break
+        else:
+            print("Prime")
+    else:
+        print("Not Prime")
+
+Prime(5)
