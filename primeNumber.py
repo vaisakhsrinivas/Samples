@@ -4,7 +4,6 @@ def Prime(number):
         
        @return: bool: True if number is prime else false
     """
-    count = 0
     if type(number) != int:
         return False
     elif number == 0:
