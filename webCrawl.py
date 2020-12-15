@@ -2,9 +2,21 @@ import json
 import requests
 from bs4 import BeautifulSoup
 
+
 def get_country_asn_info(raw_data, country_name):
+    """get country info 
+        @args:
+          raw_data: Raw data from url parsed
+          country_name: Country name
+        @returns:
+          None: If no data retrived from parsed url
+          dict: Mapped ASN info
+    """
     asn_info_map = {}
     country_class = raw_data.find(class_ = "sortable")
+
+    if (country_class == None):
+        return None
 
     for row in country_class("tr"):
         counter = 0
@@ -29,6 +41,11 @@ def get_country_asn_info(raw_data, country_name):
     return asn_info_map
 
 def get_asn_info(url):
+    """get asn info 
+        @args:
+          url: Base ASN site URL
+        @returns:
+    """
     header={ 'User-Agent': 'Mozilla/5.0' }
     session = requests.Session()
     source_code = session.get(url, headers = header)
@@ -45,8 +62,9 @@ def get_asn_info(url):
         raw_data = BeautifulSoup(link_raw_data.text, 'html.parser')
         asn_info_map = get_country_asn_info(raw_data, country_name)
 
-    with open('asn_info_map.json', 'a') as fp:
-        json.dump(asn_info_map, fp)
+        if (asn_info_map != None):
+            with open('asn_info_map.json', 'a') as fp:
+                json.dump(asn_info_map, fp)
 
 # Driver code
 if __name__ == '__main__':
