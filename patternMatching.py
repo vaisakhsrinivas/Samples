@@ -2,22 +2,18 @@ def patternMatching(s, p):
     stringlength = len(s)
     patternlength = len(p)
 
-    start = 0
-    end = 0
+    c = 0
 
-    while start < stringlength:
-        if s[start+end] != p[end]:
-            start = start + 1
-            end = 0
-            continue
-        end = end + 1
+    index = []
 
-        if end == patternlength:
-            return start
-    return -1
+    while c < stringlength:
+        if s[c:c+patternlength] == p:
+            index.append(c)
+        c = c+1
+    return index
 
 
-s = "CAbCCDAA"
-p = "AA"
+s = "GCTCTCTGCCTCTACTTA"
+p = "CT"
 
 print(patternMatching(s,p))
