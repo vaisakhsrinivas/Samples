@@ -1,32 +1,25 @@
 def equilibriumpoint(a):
 
-    right_sum = 0
-    left_sum = 0
     l = len(a)
 
-    for i in range(1,l):
-        right_sum = right_sum + a[i]
+    for i in range(l):
+        right_sum = 0
+        left_sum = 0
 
-    i, j = 0, 1
+        for j in range(i):
+            left_sum = left_sum + a[j]
 
+        for j in range(i+1, l):
+            right_sum =right_sum + a[j]
 
-    while j < l:
-
-        right_sum = right_sum - a[j]
-        left_sum = left_sum + a[i]
-
-        if right_sum == left_sum:
-
+        if left_sum == right_sum:
             return i+1
-
-        i = i + 1
-        j = j + 1
 
     return -1
 
 
 
 
-l = [6,4,5,10]
+l = [20,17,42,25,32,32,30,32,37,9,2,33,31,17,14,40,9,12,36,21,8,33,6,6,10,37,12,26,21,3]
 
 print(equilibriumpoint(l))
