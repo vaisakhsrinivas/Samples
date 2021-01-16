@@ -24,10 +24,6 @@ def positivenumber(arr, l):
     return l+1
 
 
-
-
-
-
 def missingnumber(arr, l):
 
    s = seperate(arr , l)
@@ -38,6 +34,6 @@ def missingnumber(arr, l):
 
 
 
-a = [0,-10,2,10,-20]
+a = [0,-10,-2,-1,-20]
 l = len(a)
 print(missingnumber(a, l))
