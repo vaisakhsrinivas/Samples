@@ -27,7 +27,7 @@ def maxodd(n):
     elif len_n > 1:
 
         for i in range(len_n):
-            if ((n[i] % 2) != 0) and n[i] > max_odd:
+            if ((n[i] % 2) != 0) and isinstance(n[i], int) and n[i] > max_odd:
                 max_odd = n[i]
         print(max_odd)
                 #odd.append(n[i])
@@ -38,5 +38,5 @@ def maxodd(n):
         print(odd[0])
 
 
-a = [1,3,4,4.5,97,103,-35]
+a = [1,3,4,4.5]
 maxodd(a)
