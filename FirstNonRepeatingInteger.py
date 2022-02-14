@@ -1,4 +1,5 @@
 def find_first_unique(lst):
+
     for index1 in range(len(lst)):
         index2 = 0
         while(index2 < len(lst)):

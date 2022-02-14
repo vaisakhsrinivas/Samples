@@ -38,5 +38,5 @@ def maxodd(n):
         print(odd[0])
 
 
-a = [1,3,4,4.5]
+a = [2,5]
 maxodd(a)
