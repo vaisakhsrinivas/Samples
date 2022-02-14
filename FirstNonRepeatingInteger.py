@@ -10,5 +10,4 @@ def find_first_unique(lst):
             return lst[index1]
     return None
 
-
 print(find_first_unique([9, 9, 3, 2, 6, 6]))
