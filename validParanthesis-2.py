@@ -6,13 +6,10 @@ class Solution:
         for i in s:
             if i in d:
                 st.append(i)
-            elif i in d.values():
-                if not st:
+            else:
+                if not st or d[st.pop()] != i:
                     return False
-                combination = st.pop()
-                if d.get(i) == combination:
-                    return True
-        return not st
+        return len(st) == 0
     
 check = "[]("
 c = Solution()
