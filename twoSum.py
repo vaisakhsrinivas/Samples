@@ -8,6 +8,7 @@ def twoSum(givenlist, target):
         if diff in result:
             return [i,result[diff]]
         result[givenlist[i]] = i
+    return []
 
 
 
