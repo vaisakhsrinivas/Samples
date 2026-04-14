@@ -8,8 +8,11 @@ class Solution:
 
     def createList(self, arr):
         dummy = ListNode()
+        # head = ListNode(arr[0])
+        # current = head
         current = dummy
-        for val in arr:
+        for val in arr: # for val in arr[1:]:
+            # current.next = ListNode (val)
             current.next = ListNode(val)
             current = current.next
         return dummy.next
