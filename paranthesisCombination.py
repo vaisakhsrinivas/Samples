@@ -24,8 +24,8 @@ def get_combinations(n):
 
 
 
-get_combinations(2) # should return 2.
-get_combinations(3) # should return 5.
-get_combinations(5) # should return 42.
-get_combinations(8) # should return 1430.
-get_combinations(13) # should return 742900.
+print(get_combinations(2)) # should return 2.
+print(get_combinations(3)) # should return 5.
+print(get_combinations(5)) # should return 42.
+print(get_combinations(8)) # should return 1430.
+print(get_combinations(13)) # should return 742900.
