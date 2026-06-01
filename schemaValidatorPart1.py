@@ -11,6 +11,7 @@ def is_valid_schema(obj):
 
     for key, value in obj.items():
         if key == 'username' and isinstance(value, str):
+            # altertive - if k == "username" and type(v) == str:
             return True
     return False
 
