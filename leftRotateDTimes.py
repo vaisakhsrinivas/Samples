@@ -28,6 +28,7 @@ def rotatedtimes(a, d):
 def rotatedtimestoright(a, d):
     d = d % len(a)  # Handle cases where d > len(a)
     return a[-d:] + a[:-d]  # Slicing to rotate the array
+    #  a[d:] + a[:d] #left rotate
 
 a = [1,2,3,5]
 print(rotatedtimestoright(a,2))
