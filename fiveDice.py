@@ -15,7 +15,6 @@ Hand	Description
 "five of a kind"	All five dice with the same value
 '''
 
-from Unique import unique
 def five_dice(dice):
 
     dice = sorted(dice)
@@ -25,7 +24,7 @@ def five_dice(dice):
         counts.append(dice.count(value))
     counts.sort(reverse=True)
 
-    unique = sorted(set(dice))
+    unq = sorted(set(dice))
 
     if counts[0] == 5:
         return "five of a kind"
@@ -33,9 +32,9 @@ def five_dice(dice):
         return "four of a kind"
     if counts[0] == 3 and counts[1] == 2:
         return "full house"
-    if len(unique) == 5 and unique[-1] - unique[0] == 4:
+    if len(unq) == 5 and unq[-1] - unq[0] == 4:
         return "large straight"
-    if any(unique[i+3] - unique[i] == 3 and unique[i+3] - unique[i+1] == 2 and unique[i+1] - unique[i] == 1 for i in range(len(unique)-3)):
+    if any(unq[i+3] - unq[i] == 3 and unq[i+3] - unq[i+1] == 2 and unq[i+1] - unq[i] == 1 for i in range(len(unq)-3)):
         return "small straight"
     if counts[0] == 3:
         return "three of a kind"
